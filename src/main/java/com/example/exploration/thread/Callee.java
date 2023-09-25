@@ -38,7 +38,7 @@ public class Callee {
         new Thread(
             () -> {
               log.info(Thread.currentThread().getName() + " running");
-              callee.instanceMethodTwo();
+              callee.instanceMethodThree();
               log.info(Thread.currentThread().getName() + " finished");
             });
     Thread t4 =
