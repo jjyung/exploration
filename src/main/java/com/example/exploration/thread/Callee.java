@@ -23,30 +23,30 @@ public class Callee {
     Thread t1 =
         new Thread(
             () -> {
-              log.info("t1 running");
+              log.info(Thread.currentThread().getName() + " running");
               callee.instanceMethodOne();
-              log.info("t1 finished;");
+              log.info(Thread.currentThread().getName() + " finished");
             });
     Thread t2 =
         new Thread(
             () -> {
-              log.info("t2 running");
+              log.info(Thread.currentThread().getName() + " running");
               callee.instanceMethodTwo();
-              log.info("t2 finished;");
+              log.info(Thread.currentThread().getName() + " finished");
             });
     Thread t3 =
         new Thread(
             () -> {
-              log.info("t3 running");
+              log.info(Thread.currentThread().getName() + " running");
               callee.instanceMethodTwo();
-              log.info("t3 finished;");
+              log.info(Thread.currentThread().getName() + " finished");
             });
     Thread t4 =
         new Thread(
             () -> {
-              log.info("t4 running");
+              log.info(Thread.currentThread().getName() + " running");
               callee.instanceMethodFour();
-              log.info("t4 finished;");
+              log.info(Thread.currentThread().getName() + " finished");
             });
     t1.start();
     t2.start();
